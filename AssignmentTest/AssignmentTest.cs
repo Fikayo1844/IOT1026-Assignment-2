@@ -5,10 +5,9 @@ namespace AssignmentTest
     [TestClass]
     public class AssignmentTests
     {
-        [TestMethod]
-       public void OpenLockedTest()
+        public void OpenLockedTest()
         {
-                     // Chest starts in the locked state
+            // Chest starts in the locked state
             TreasureChest chest = new TreasureChest(TreasureChest.State.Locked);
             // Try to open the chest
             // Verify chest is still locked
@@ -16,7 +15,6 @@ namespace AssignmentTest
             Assert.AreEqual(chest.GetState(), TreasureChest.State.Locked);
         }
 
-        [TestMethod]
         public void OpenClosedTest()
         {
             // Create a new chest that is in the closed state
@@ -25,7 +23,6 @@ namespace AssignmentTest
             Assert.AreEqual(chest.GetState(), TreasureChest.State.Open);
         }
 
-        [TestMethod]
         public void OpenOpenTest()
         {
             // Create a new chest that is in the open state
